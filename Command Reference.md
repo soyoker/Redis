@@ -10,8 +10,7 @@ config get *
 | timeout 300 | 当客户端闲置多长秒后关闭连接。值为 0 表示关闭该功能 |
 | loglevel [notice] | 指定日志记录级别，Redis 总共支持四个级别：\debug、verbose、notice、warning，默认为 notice |
 | logfile [filename] | 日志记录方式，默认为标准输出，如果配置 Redis 为守护进程方式运行，而这里又配置为日志记录方式为标准输出，则日志将会发送给 /dev/null |
-| 	
-databases 16 | 设置数据库的数量，默认有16个数据库，登陆后默认数据库为0，可以使用SELECT 命令在连接上指定数据库id |
+| databases 16 | 设置数据库的数量，默认有16个数据库，登陆后默认数据库为0，可以使用SELECT 命令在连接上指定数据库id |
 | save <seconds> <changes> | 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合 |
 | rdbcompression [yes\|no] | 指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该选项，但会导致数据库文件变的巨大 |
 | dbfilename [dump.rdb] | 指定本地数据库文件名，默认值为 dump.rdb |
