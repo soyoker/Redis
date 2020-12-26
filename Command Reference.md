@@ -12,7 +12,7 @@ config get *
 | logfile [filename] | 日志记录方式，默认为标准输出，如果配置 Redis 为守护进程方式运行，而这里又配置为日志记录方式为标准输出，则日志将会发送给 /dev/null |
 | 	
 databases 16 | 设置数据库的数量，默认有16个数据库，登陆后默认数据库为0，可以使用SELECT 命令在连接上指定数据库id |
-| save <seconds> <changes> | 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合<br> Redis 默认配置文件中提供了三个条件：<br> save 900 1<br> save 300 10<br> save 60 10000<br> 分别表示 900 秒（15 分钟）内有 1 个更改<br> 300 秒（5 分钟）内有 10 个更改<br> 60 秒内有 10000 个更改<br> |
+| save <seconds> <changes> | 指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合 |
 | rdbcompression [yes\|no] | 指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该选项，但会导致数据库文件变的巨大 |
 | dbfilename [dump.rdb] | 指定本地数据库文件名，默认值为 dump.rdb |
 | dir | 指定本地数据库存放路径 |
